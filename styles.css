@@ -1,0 +1,117 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    max-width: 150px;
+    margin-left: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+.company-info {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.small-text {
+    font-size: 16px;
+    color: #666666;
+}
+.container {
+    margin-top: 20px;
+}
+.contact li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.contact li i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #0088cc; /* Blue Color */
+}
+.contact li a {
+    color: #0088cc;
+    text-decoration: none;
+}
+.contact li a:hover {
+    text-decoration: underline;
+}
+.projects h2, .team h2 {
+    color: #333333;
+}
+.project-carousel .project img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.team li {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.team li a {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+.team li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+/* تحديد حجم الخط */
+section.about p {
+    font-size: 20px; /* حجم الخط بالبكسل */
+}
+
+.project-carousel .project {
+    text-align: center;
+}
+
+.project-carousel .project img {
+    display: block; /* لضمان عرض الصورة كمركزية */
+    margin: 0 auto; /* لتوسيط الصورة داخل عنصر العرض */
+    max-width: 350px; /* الحجم الأقصى للعرض */
+    max-height: 500px; /* الحجم الأقصى للارتفاع */
+}
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+.team li span {
+    font-weight: bold; /* إعطاء النص وزنًا أكبر */
+}
