@@ -1,37 +1,26 @@
-    $(document).ready(function(){
-        // بيانات المشاريع
-        const projects = [
-            {  image: "1.png" },
-            {  image: "2.png" },
-            {  image: "3.png" },
-            {  image: "4.png" },
-            {  image: "5.png" },
-            {  image: "6.png" },
-            {  image: "7.png" },
-            {  image: "8.png" },
-            { image: "9.png" }
-        ];
+let slideIndex = 1;
+showSlides(slideIndex);
 
-        // إضافة المشاريع إلى الصفحة
-        const projectCarousel = $('.project-carousel');
-        projects.forEach(project => {
-            const projectElement = $(`
-                <div class="project">
-                    
-                    <img src="${project.image}" >
-                </div>
-            `);
-            projectCarousel.append(projectElement);
-        });
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-        // تفعيل Slick Carousel
-        projectCarousel.slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 3,
-            adaptiveHeight: true,
-            rtl: true
-        });
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-});
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
