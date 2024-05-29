@@ -3,43 +3,12 @@
 <head>
     <title>Engineer Shenouda Basheer Group</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="styles.css"> 
-    <style>
-        .nav-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px; /* Adjust as needed */
-        }
-        .nav-center a {
-            margin: 0 10px; /* Adjust spacing between links */
-        }
-        .projects-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px; /* Adjust as needed */
-        }
-        .projects-section h3 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .project-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px; /* Adjust spacing between images */
-        }
-        .project-images img {
-            max-width: 350px;
-            max-height: 500px;
-            margin-bottom: 20px; /* Adjust spacing below images */
-        }
-    </style>
+    
 </head>
 <body dir="rtl">
 
@@ -58,24 +27,37 @@
     </div>
 </header>
 
-<!-- Page content -->
-<div class="page_content" style="max-width:1564px">
-    <!-- Project Section -->
-    <div class="projects-section" id="projects">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-        <div class="project-images">
-            <img src="1.png" alt="House">
-            <img src="2.png" alt="House">
-            <img src="3.png" alt="House">
-            <img src="4.png" alt="House">
-            <img src="5.png" alt="House">
-            <img src="6.png" alt="House">
-            <img src="7.png" alt="House">
-            <img src="8.png" alt="House">
-            <img src="9.png" alt="House">
-        </div>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 9</div>
+        <img src="1.png" style="width:100%">
+        <div class="text">Caption Text</div>
     </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 9</div>
+        <img src="2.png" style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 9</div>
+        <img src="3.png" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
 </div>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script src="script.js"></script>
 
 </body>
 </html>
