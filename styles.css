@@ -13,7 +13,6 @@ header {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 .header-content {
     display: flex;
     align-items: center;
@@ -37,81 +36,90 @@ header h1 {
     font-size: 16px;
     color: #666666;
 }
-.container {
-    margin-top: 20px;
+
+/*slidshow*/
+* {
+    box-sizing: border-box;
 }
-.contact li {
-    display: flex;
-    align-items: center;
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+.mySlides {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
     font-size: 18px;
-    color: #333333;
-    margin-bottom: 10px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
-.contact li i {
-    margin-right: 10px;
-    font-size: 20px;
-    color: #0088cc; /* Blue Color */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
-.contact li a {
-    color: #0088cc;
-    text-decoration: none;
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
-.contact li a:hover {
-    text-decoration: underline;
-}
-.projects h2, .team h2 {
-    color: #333333;
-}
-.project-carousel .project img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.team li {
-    font-size: 18px;
-    color: #333333;
-    margin-bottom: 10px;
-}
-
-.team li a {
-    color: #0088cc;
-    text-decoration: none;
-}
-
-.team li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-/* تحديد حجم الخط */
-section.about p {
-    font-size: 20px; /* حجم الخط بالبكسل */
-}
-
-.project-carousel .project {
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
     text-align: center;
 }
-
-.project-carousel .project img {
-    display: block; /* لضمان عرض الصورة كمركزية */
-    margin: 0 auto; /* لتوسيط الصورة داخل عنصر العرض */
-    max-width: 350px; /* الحجم الأقصى للعرض */
-    max-height: 500px; /* الحجم الأقصى للارتفاع */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-.team li span {
-    font-weight: bold; /* إعطاء النص وزنًا أكبر */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px;
+    }
 }
