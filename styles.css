@@ -18,12 +18,13 @@ header {
 }
 .header-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 header .logo {
-    max-width: 150px;
+    max-width: 250px;
     margin-left: 20px;
 }
 
@@ -34,6 +35,7 @@ header h1 {
 .company-info {
     margin-top: 10px;
     margin-left: 20px;
+    text-align: center;
 }
 .small-text {
     font-size: 16px;
@@ -43,11 +45,11 @@ header h1 {
 .nav-center {
             display: flex;
             justify-content: center;
-            gap: 20px; /* مسافة بين الأزرار */
-            margin-top: 20px; /* مسافة فوق الأزرار */
+            gap: 10px; /* مسافة بين الأزرار */
+            margin-top: 10px; /* مسافة فوق الأزرار */
         }
         .nav-center a {
-            padding: 10px 20px;
+            padding: 10px 10px;
             text-decoration: none;
             color: #000;
             border: 1px solid #ccc;
@@ -124,37 +126,41 @@ header h1 {
 
 /* Style the next and previous buttons */
 .prev, .next {
+    right: 725px;
+    left: 735px;
     cursor: pointer;
     position: absolute;
-    top: 300px;
+    top: 400px;
     width: auto;
     padding: 16px;
     margin-top: -22px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 35px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.8); /* Make them visible by default */
+    background-color: white; /* Make them visible by default */
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
+    color: black;
     border-radius: 3px 0 0 3px;
 }
 
 /* Position the "prev button" to the left */
 .prev {
     left: 0;
+    color: black;
     border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,1); /* Darker on hover */
+    background-color: white; /* Darker on hover */
 }
 
 
@@ -225,3 +231,5 @@ header h1 {
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+
