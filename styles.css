@@ -126,11 +126,9 @@ header h1 {
 
 /* Style the next and previous buttons */
 .prev, .next {
-    right: 725px;
-    left: 735px;
     cursor: pointer;
     position: absolute;
-    top: 400px;
+    top: 300px;
     width: auto;
     padding: 16px;
     margin-top: -22px;
