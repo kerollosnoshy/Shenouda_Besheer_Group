@@ -12,18 +12,19 @@
 <body dir="rtl">
 
 <header>
-    <div class="header-content d-flex align-items-center justify-content-center">
+    <div class="header-content d-flex flex-column align-items-center justify-content-center">
         <img src="logo.jpg" alt="لوجو الشركة" class="logo">
-        <div class="company-info ml-3" style="margin-top: 25px; margin-left: 50px;"> <!-- تحريك العناصر إلى الأعلى واليمين -->
+        <div class="company-info text-center" style="margin-top: 25px; margin-left: 50px;"> <!-- تحريك العناصر إلى الأعلى واليمين -->
             <h1>مجموعة المهندس الإنشائي شنودة بشير العقارية بالغردقة</h1>
             <p class="small-text">شركة متخصصة في المقاولات والأعمال المتكاملة والتشطيبات والاستثمار العقاري بمنطقة البحر الأحمر</p>
         </div>
     </div>
-    <div class="nav-center w3-hide-small">
-        <a href="#about" class="w3-bar-item w3-button">عن الشركة</a>
+    <div class="nav-center w3-hide-small mt-3 justify-content-center">
+        <a href="#about" class="w3-bar-item w3-button">الشركة</a>
         <a href="#projects" class="w3-bar-item w3-button">مشاريع الشركة </a>
         
-        <a href="#contact" class="w3-bar-item w3-button">التواصل</a>
+        <a href="#request" class="w3-bar-item w3-button">طلب حجز</a>
+        <a href="#contact" class="w3-bar-item w3-button">فريق الدعم</a>
     </div>
 </header>
 
@@ -31,7 +32,7 @@
     <div class="container-fluid">
         <div class="w3-container w3-padding-32" id="about">
             <hr>
-            <h2>عن الشركة</h2>
+            <h2>الشركة</h2>
             <p>مجموعة المهندس الإنشائي شنودة بشير العقارية هي شركة رائدة في مجال المقاولات والاستثمار العقاري في منطقة البحر الأحمر. تأسست الشركة بهدف تقديم حلول سكنية وتجارية مبتكرة ومتكاملة تلبي احتياجات عملائنا الكرام. نحن ملتزمون بتقديم أعلى مستويات الجودة في جميع مشاريعنا، مع التركيز على التصميم الفريد، التشطيبات الراقية، واستخدام أحدث التقنيات في البناء.</p>
             <h2>رسالة الشركة</h2>
             <p>نحن نسعى لتحقيق رضا عملائنا من خلال تقديم مشاريع عقارية عالية الجودة تسهم في تحسين جودة الحياة وتعزيز الاستثمارات الناجحة.</p>
@@ -106,17 +107,57 @@
             </div>
         </div>
 <hr>
-        <div class="w3-container w3-padding-32" id="contact">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-            <p>Lets get in touch and talk about your next project.</p>
-            <form action="/action_page.php" target="_blank">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-                <button class="w3-button w3-black w3-section" type="submit">
-                <i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
-            </form>
+        <div class="w3-container w3-padding-32" id="request">
+            <div class="container mt-5">
+    <h2 class="text-center">استمارة طلب حجز وحدة</h2>
+    <form>
+        <div class="form-group">
+            <label for="fullName">الاسم الكامل</label>
+            <input type="text" class="form-control" id="fullName" placeholder="أدخل اسمك الكامل" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">رقم الهاتف</label>
+            <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم هاتفك" required>
+        </div>
+
+        <h4>معلومات الوحدة المطلوبة</h4>
+        <div class="form-group">
+            <label for="projectName">اسم المشروع</label>
+            <select class="form-control" id="projectName" required>
+                <option value="">اختر المشروع</option>
+                <option value="intercontinental">عمارة الانتركونتننتل</option>
+                <option value="port">عمارة الميناء</option>
+                <option value="kingTut">عمارة كنج توت</option>
+                <option value="marMinaCompound">كمبوند مارمينا</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="unitType">نوع الوحدة</label>
+            <select class="form-control" id="unitType" required>
+                <option value="">اختر نوع الوحدة</option>
+                <option value="apartment">شقة</option>
+                <option value="studio">استوديو</option>
+            </select>
+        </div>
+
+        <h4>تفاصيل الدفع</h4>
+        <div class="form-group">
+            <label for="paymentMethod">طريقة الدفع المفضلة</label>
+            <select class="form-control" id="paymentMethod" required>
+                <option>نقدي</option>
+                <option>تقسيط</option>
+                <option>تمويل بنكي</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="notes">ملاحظات إضافية</label>
+            <textarea class="form-control" id="notes" rows="3" placeholder="أدخل أي ملاحظات أو متطلبات خاصة"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">إرسال الطلب</button>
+    </form>
+</div>
         </div>
     </div>
 
