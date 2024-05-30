@@ -54,56 +54,54 @@
         </div>
         <hr>
         <div class="w3-container w3-padding-32" id="projects">
-            <div class="container">
+            <div class="slideshow-container">
                 <!-- Full-width images with number text -->
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">1 / 9</div>
                     <img src="1.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">2 / 9</div>
                     <img src="2.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">3 / 9</div>
                     <img src="3.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">4 / 9</div>
                     <img src="4.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">5 / 9</div>
                     <img src="5.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">6 / 9</div>
                     <img src="6.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">7 / 9</div>
                     <img src="7.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">8 / 9</div>
                     <img src="8.jpg" style="width:100%">
                 </div>
 
-                <div class="mySlides">
+                <div class="mySlides fade">
                     <div class="numbertext">9 / 9</div>
                     <img src="9.jpg" style="width:100%">
                 </div>
 
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
             </div>
         </div>
         <hr>
@@ -175,35 +173,19 @@
 
 
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // تحديد الوقت بين الانتقال بين الصور بالمللي ثانية
 }
 </script>
 
